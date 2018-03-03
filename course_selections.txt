@@ -1,1 +1,8 @@
-3,HTML:Advanced,April 1st,April 30th,80000
+
+
+
+
+1,HTML:Beginners,Feb 19th,Feb 28th,20000
+1,CSS:Beginners,Feb 19th,Feb 28th,20000
+1,Javascript:Beginners,Feb 19th,Feb 28th,20000
+1,Ruby:Beginners,Feb 19th,Feb 28th,20000

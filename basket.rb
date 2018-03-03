@@ -39,7 +39,9 @@ module Basket
             when
                 course_option == "1"
                 courses_selected = ""
-                courses_selected << IO.read("course_selections.txt")
+                File.open("course_selections.txt").each do |line|
+                    courses_selected << line
+                end
                 unless courses_selected.include?(rows[0].join(","))
                 courses_selected += rows[0].join(",") + "\n"
                 total = IO.read("total_cost.txt").to_i
@@ -47,7 +49,10 @@ module Basket
                 IO.write("total_cost.txt",total)
                 puts "\n"
                 puts "Your current total is: ".yellow + "$".green + IO.read("total_cost.txt").green
-                IO.write("course_selections.txt",courses_selected)
+                File.open("course_selections.txt","w") do |line|
+                    line.puts "\n" + courses_selected
+                end
+                # IO.write("course_selections.txt",courses_selected)
                 puts courses_selected
                 puts "\n"
                 Available_Courses.options

@@ -31,6 +31,7 @@ elsif option == "2"
     Information.information 
 
 elsif option == "3"
+    exit
     
 end
 end 

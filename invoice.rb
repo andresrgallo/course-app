@@ -6,7 +6,11 @@ module Invoice
 
     def invoice
     
-       courses = IO.read("course_selections.txt")
+    #    courses = IO.read("course_selections.txt")
+    courses = ""
+    File.open("course_selections.txt").each do |line|
+       courses << line
+    end
        puts "      Invoice      ".center(80,"-")
        puts courses  
        total = IO.read("total_cost.txt")
