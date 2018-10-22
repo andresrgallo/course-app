@@ -11,7 +11,7 @@ module Python_Courses
     puts table
     rows
     
-    Basket.shopping_basket(rows)
+    Basket::shopping_basket(rows)
     end
 
 end
